@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rupeek</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+<body>
+  <h2 class="page-header" style="text-align: center;">Problem 1</h2>
+  <div class="container" ng-app="p1App" ng-controller="P1Ctrl">
+    <table class="table">
+      <tr><th>Analysis Unit</th><th>Analised data</th></tr>
+      <tr><td>Total Distance</td><td>{{analysedData.td}}</td>
+      <tr><td>Max speed</td><td>{{analysedData.ms}} Unit/s</td></tr>
+      <tr><td>Average speed</td><td>{{analysedData.as}} Unit/s</td></tr>
+      <tr><td>Elevation gained</td><td>{{analysedData.eg}}</td></tr>
+      <tr><td>Moving time</td><td>{{analysedData.mt}} s</td></tr>
+      <tr><td>Total time elapsed</td><td>{{analysedData.tt}} s</td></tr>
+    </table>
+    <div class="loader" ng-show="showLoader"> </div>
+  </div>
+</body>
+  <script src="Helper.js"></script>
+  <script src="Controllers.js"></script>
+</html>

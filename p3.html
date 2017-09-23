@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rupeek</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+<body>
+  <h2 class="page-header" style="text-align: center;">Problem 3</h2>
+  <div class="container" ng-app="p3App" ng-controller="P3Ctrl">
+    <form ng-submit="showNumbers(input)">
+      <div class="row">
+        <div class="col-sm-8"><input type="number" class="form-control" ng-model="input" placeholder="Enter a number"></div>
+        <div class="col-sm-4" style="text-align: center;"><input type="submit" class="btn btn-primary"></div>
+      </div>
+    </form>
+    <div class="alert alert-danger" ng-show="error" style="margin-top: 50px;">{{error}}</div>
+
+    <div ng-show="n && showResult" style="margin-top: 50px;">
+      <p><strong>{{pairs.length}} {{pairs.length ==1 ? 'pair' : 'pairs'}} found:</strong></p>
+      <p ng-repeat="pair in pairs">{{pair[0]}} + {{pair[1]}} = {{n}}</p>
+    </div>
+    <div class="loader" ng-show="showLoader"> </div>
+  </div>
+</body>
+  <script src="Helper.js"></script>
+  <script src="Controllers.js"></script>
+</html>
